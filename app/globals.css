@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --social-blue: #0078f4;
+  --dark-purple: #3a0ca3;
+  --lavender: #b8b5ff;
+  --sky: #e8f1ff;
+  --mist: #f4f2ff;
+  --ink: #0f1330;
+  --slate: #5b6184;
+}
+
+html,
+body {
+  background-color: #fbfbff;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(0, 120, 244, 0.18);
+  color: var(--dark-purple);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.78) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    backdrop-filter: blur(18px) saturate(1.4);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+
+  .glass-strong {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.92) 0%,
+      rgba(255, 255, 255, 0.7) 100%
+    );
+    backdrop-filter: blur(22px) saturate(1.6);
+    -webkit-backdrop-filter: blur(22px) saturate(1.6);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+  }
+
+  .grain {
+    background-image: radial-gradient(
+      rgba(15, 19, 48, 0.05) 1px,
+      transparent 1px
+    );
+    background-size: 3px 3px;
+  }
+
+  .gradient-text {
+    background: linear-gradient(120deg, #0f1330 0%, #3a0ca3 55%, #0078f4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .gradient-border {
+    position: relative;
+  }
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 120, 244, 0.55),
+      rgba(184, 181, 255, 0.6),
+      rgba(58, 12, 163, 0.55)
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
