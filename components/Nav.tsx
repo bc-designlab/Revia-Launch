@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Logo from "./Logo";
+import ReviaLogo from "./ReviaLogo";
 import { useWaitlist } from "./WaitlistContext";
 
 const links = [
@@ -35,12 +35,9 @@ export default function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 sm:py-6">
         <a
           href="#"
-          className="flex items-center gap-2 transition-opacity hover:opacity-80"
+          className="flex items-center transition-opacity hover:opacity-80"
         >
-          <Logo />
-          <span className="text-[15px] font-semibold tracking-tight text-revia-ink">
-            Revia
-          </span>
+          <ReviaLogo height={47} />
         </a>
 
         <nav className="hidden md:block">

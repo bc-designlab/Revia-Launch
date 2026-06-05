@@ -2,7 +2,6 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Interaction from "@/components/Interaction";
-import UseCases from "@/components/UseCases";
 import ComingSoon from "@/components/ComingSoon";
 import Footer from "@/components/Footer";
 import Background from "@/components/Background";
@@ -17,7 +16,6 @@ export default function Page() {
         <Hero />
         <Features />
         <Interaction />
-        <UseCases />
         <ComingSoon />
         <Footer />
       </main>
