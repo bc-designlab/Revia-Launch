@@ -140,3 +140,7 @@ body::after{opacity:.018}.nav{border-bottom:0;background:linear-gradient(180deg,
 .keep-row b{font-size:15px}.keep-row span{font-size:12.5px}
 @media(max-width:1020px){.f-row:nth-of-type(3) .f-visual,.f-row:nth-of-type(4) .f-visual,.f-row:nth-of-type(5) .f-visual{max-width:600px;margin-inline:auto;width:100%}}
 @media(max-width:640px){.attach-card{gap:18px;padding:16px 0}.scan-frame{width:140px;height:140px}.keep-row{padding:13px 14px}.keep-row .sw{width:44px;height:44px}.f-row:nth-of-type(4) .f-visual{padding:4px 0 10px}}
+
+/* Final CTA: remove the glass surface; retain its existing border geometry and spacing. */
+#coming-soon .cta-panel{background:none;border-color:transparent;border-radius:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+#coming-soon .cta-panel::before{display:none;animation:none}
