@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Revia — Attach memories to the things you love</title>
+<meta name="description" content="Save memories to the things you love. Scan them to bring those moments back." />
+<link rel="preload" href="assets/fonts/inter-v20-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="fonts.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="light-review.css?v=glass11" />
+<link rel="icon" href="assets/revia-logo.svg" type="image/svg+xml" />
+</head>
+<body data-review-revision="glass-loop-v4">
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#" aria-label="Revia home"><img class="logo" src="assets/revia-logo-ink.svg" alt="Revia" /></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#interaction">How it works</a>
+    </nav>
+    <button class="btn btn-primary btn-sm" data-waitlist>Join the Waitlist</button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 class="display">Attach <span class="glow-word">memories</span><br />to the things<br />you love.</h1>
+      <p class="lede">Save memories to the things you love. Scan them to bring those moments back.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" data-waitlist>Join the Waitlist <span class="arr">→</span></button>
+        <a class="btn btn-ghost" href="#features">See How It Works <span class="arr">→</span></a>
+      </div>
+    </div>
+
+    <!-- AR STAGE: scan the print -> memory unfolds in space -->
+    <div class="stage glb-hero-stage" id="stage" role="img" aria-label="A light beam scans the tinted glass flower from top to bottom. One memory format at a time floats in front of it: three photographs, a muted video preview, an audio waveform, then a short note in 3D type. Conceptual AR visualization.">
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="hero-fallback" id="fallback"><picture><source media="(max-width:640px)" srcset="assets/hero-poster-mobile.webp?v=glass5" /><img src="assets/hero-poster-desktop.webp?v=glass5" width="675" height="620" decoding="async" fetchpriority="high" alt="A lightly tinted pink-lavender glass flower resting on the page" /></picture></div>
+<div class="hero-a11y-controls" aria-label="Animation controls"><button id="pauseBtn" type="button" aria-pressed="false"><span>Pause</span> animation</button><button id="replayBtn" type="button">Replay animation</button></div>
+</div>
+  </div>
+</section>
+
+<!-- ================= INTERLUDE ================= -->
+<section class="interlude">
+  <div class="wrap" data-reveal>
+    <blockquote>“Some memories deserve <span class="hl">a place in space</span>.”</blockquote>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <p class="section-tag">What Revia does</p>
+      <h2 class="h2">Four small steps from a moment to a memory you can hold.</h2>
+    </div>
+
+    <div class="f-row" data-reveal>
+      <div class="f-copy">
+        <span class="step-tag">01 · Create</span>
+        <h3>Create a memory experience</h3>
+        <p>Upload images, video, audio, or text to build a personal spatial memory that feels like the moment itself.</p>
+      </div>
+      <div class="f-visual">
+        <div class="chip-grid">
+          <div class="m-chip"><span class="ic" style="background:linear-gradient(135deg,#FFB7C5,#FFD6A5)">◈</span>Photos</div>
+          <div class="m-chip"><span class="ic" style="background:linear-gradient(135deg,#1F8FFF,#A99BFF)">▶</span>Video</div>
+          <div class="m-chip"><span class="ic" style="background:linear-gradient(135deg,#6C4CF1,#1F8FFF)">♪</span>Audio</div>
+          <div class="m-chip"><span class="ic" style="background:linear-gradient(135deg,#C8A8FF,#A7C7FF)">✎</span>Text</div>
+          <div class="m-layers">
+            <div class="row"><b>Memory · Summer in Porto</b><span>4 layers</span></div>
+            <div class="m-bars"><i style="width:40%"></i><i style="width:70%"></i><i style="width:55%"></i><i style="width:30%"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="f-row flip" data-reveal>
+      <div class="f-copy">
+        <span class="step-tag">02 · Attach</span>
+        <h3>Attach it to a printed image</h3>
+        <p>Link your memory to a printed image, such as a photo or postcard. Revia tracks that image to show the linked memory.</p>
+      </div>
+      <div class="f-visual">
+        <div class="attach-card">
+          <div class="scan-frame"><div class="scan-beam" style="animation:beam-y 3.4s ease-in-out infinite;opacity:1"></div></div>
+          <div class="attach-meta">
+            <b>Travel postcard</b>
+            Printed image · memory target
+            <br /><span class="linked-pill">Linked</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="f-row" data-reveal>
+      <div class="f-copy">
+        <span class="step-tag">03 · Revisit</span>
+        <h3>Revisit through AR</h3>
+        <p>Open the memory again through an immersive visual interaction that wraps the space around you.</p>
+      </div>
+      <div class="f-visual">
+        <div class="demo-scene" role="img" aria-label="Illustrative draft: a phone pointed at a travel postcard on a tabletop; the screen shows the same postcard with a travel photo anchored above it. The hand holding the phone is not yet photographed.">
+          <div class="demo-table"></div>
+          <div class="demo-postcard"><img src="assets/postcard-amalfi.svg" alt="" width="600" height="400" loading="lazy" decoding="async" /></div>
+          <div class="demo-phone">
+            <div class="demo-screen">
+              <div class="demo-cam-table"></div>
+              <div class="demo-cam-postcard"><img src="assets/postcard-amalfi.svg" alt="" width="600" height="400" loading="lazy" decoding="async" /></div>
+              <div class="demo-scanbar" aria-hidden="true"></div>
+              <div class="demo-anchor"></div>
+              <div class="demo-memory"><img src="assets/placeholder-photo-small.jpg" alt="" width="800" height="533" loading="lazy" decoding="async" /><span>Amalfi, that afternoon.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="f-row flip" data-reveal>
+      <div class="f-copy">
+        <span class="step-tag">04 · Keep</span>
+        <h3>Keep meaningful moments close</h3>
+        <p>Designed for personal archives, gifts, and emotional objects you actually want to live with.</p>
+      </div>
+      <div class="f-visual">
+        <div class="keep-list">
+          <div class="keep-row"><span class="sw" style="background:linear-gradient(135deg,#FFE2B8,#FFB7C5)"></span><div><b>For Dad</b><span>Father's day</span></div><span class="gift">✦</span></div>
+          <div class="keep-row"><span class="sw" style="background:linear-gradient(135deg,#B8B5FF,#A7C7FF)"></span><div><b>Wedding ring</b><span>Personal archive</span></div><span class="gift">✦</span></div>
+          <div class="keep-row"><span class="sw" style="background:linear-gradient(135deg,#C8A8FF,#FFD6E0)"></span><div><b>First sketchbook</b><span>Studio</span></div><span class="gift">✦</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INTERACTION ================= -->
+<section class="section" id="interaction">
+  <div class="wrap ix-grid">
+    <div data-reveal>
+      <p class="section-tag">How it feels</p>
+      <h2 class="h2">A quiet portal hiding inside ordinary things.</h2>
+      <p class="lede" style="margin-top:18px">Revia stays out of the way until you reach for it. Point your camera at a linked image, and the memory unfolds — soft motion, real sound, no clutter.</p>
+      <ul class="ix-steps">
+        <li><span class="n">1</span><div><b>Scan the linked image</b><p>Aim your camera at the printed image you linked a memory to.</p></div></li>
+        <li><span class="n">2</span><div><b>Recognise the link</b><p>Revia tracks the image and prepares its linked memory.</p></div></li>
+        <li><span class="n">3</span><div><b>Step into the memory</b><p>The moment opens around you with sound, light, and motion.</p></div></li>
+      </ul>
+    </div>
+    <div data-reveal>
+      <div class="portal feel-scene" role="img" aria-label="Illustrative visualization: the same travel postcard with a photograph, a short note and a small voice-note waveform floating around it.">
+        <div class="feel-haze"></div>
+        <div class="feel-postcard"><img src="assets/postcard-amalfi.svg" alt="" width="600" height="400" loading="lazy" decoding="async" /></div>
+        <div class="feel-photo"><img src="assets/placeholder-photo-small.jpg" alt="" width="800" height="533" loading="lazy" decoding="async" /><span>Amalfi, that afternoon.</span></div>
+        <div class="feel-note"><small>Note · June</small><p>We stayed until the lights came on.</p></div>
+        <div class="feel-audio"><small>Voice note</small><div class="feel-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMING SOON ================= -->
+<section class="section" id="coming-soon">
+  <div class="wrap" data-reveal>
+    <div class="cta-panel cta-centered">
+      <div class="cta-inner">
+        <h2><span class="grad">Be among the first to experience Revia.</span></h2>
+        <p class="lede">Join the waitlist and we’ll email you when early access opens.</p>
+        <div class="cta-actions">
+          <button class="btn btn-primary" data-waitlist>Join the Waitlist <span class="arr">→</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-bar">
+      <div class="footer-brand">
+        <img loading="lazy" decoding="async" class="logo sm" src="assets/revia-logo-ink.svg" alt="Revia" />
+        <span>— spatial memories.</span>
+      </div>
+      <div class="footer-meta">
+        <span>© <span id="year">2026</span> Revia</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= WAITLIST MODAL (concept) ================= -->
+<div class="modal-backdrop" id="waitlistModal" role="dialog" aria-modal="true" aria-labelledby="wlTitle">
+  <div class="modal-wrap">
+    <div class="modal">
+      <button class="close-x" id="wlClose" aria-label="Close">✕</button>
+      <div id="wlForm">
+        <h3 id="wlTitle">Join the Waitlist</h3>
+        <p>Join the waitlist and we’ll email you when early access opens.</p>
+        <form id="wlFormEl" action="https://formsubmit.co/hi@bcdesignlab.com" method="POST">
+          <input type="hidden" name="_subject" value="Revia Waitlist · New Signup" />
+          <input type="email" name="email" id="wlEmail" placeholder="you@example.com" required aria-label="Email address" />
+          <button class="btn btn-primary" type="submit" style="justify-content:center">Join the Waitlist <span class="arr">→</span></button>
+        </form>
+        <p id="wlError" role="alert" hidden>Couldn’t submit. Please try again.</p>
+      </div>
+      <div id="wlDone" class="ok" hidden>
+        <div class="big">✦</div>
+        <h3>You’re on the list!</h3>
+        <p>You’ll be among the first to know when Revia launches.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
+<script defer src="hero-loader.js?v=gsap2"></script>
+</body>
+</html>

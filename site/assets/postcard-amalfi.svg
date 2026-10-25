@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-label="Illustrated travel postcard of a pastel coastal town above the sea">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe0ff"/><stop offset=".55" stop-color="#eadff5"/><stop offset="1" stop-color="#ffe3d2"/></linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9ccbe6"/><stop offset="1" stop-color="#3f86bb"/></linearGradient>
+    <linearGradient id="cliff" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9c5b4"/><stop offset="1" stop-color="#a98b78"/></linearGradient>
+    <linearGradient id="cliff2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c7b2a2"/><stop offset="1" stop-color="#8e7262"/></linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff2d6"/><stop offset=".6" stop-color="#ffd9a3"/><stop offset="1" stop-color="#ffd9a3" stop-opacity="0"/></radialGradient>
+    <clipPath id="frame"><rect x="18" y="18" width="564" height="330" rx="8"/></clipPath>
+  </defs>
+  <rect width="600" height="400" rx="14" fill="#fffdf9"/>
+  <g clip-path="url(#frame)">
+    <rect x="18" y="18" width="564" height="330" fill="url(#sky)"/>
+    <circle cx="430" cy="118" r="70" fill="url(#sun)"/>
+    <circle cx="430" cy="118" r="26" fill="#fff4de"/>
+    <rect x="18" y="236" width="564" height="112" fill="url(#sea)"/>
+    <path d="M18 246 Q 120 238 230 250 T 460 246 T 582 252 L582 348 L18 348Z" fill="#5fa0cf" opacity=".55"/>
+    <path d="M18 280 q 40 -6 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 l 0 68 l -560 0z" fill="#8fc3e3" opacity=".35"/>
+    <path d="M18 130 C 70 120 110 150 150 150 C 190 150 220 120 260 140 C 300 160 318 230 330 262 L 18 262 Z" fill="url(#cliff)"/>
+    <path d="M18 170 C 60 160 90 190 130 182 C 170 174 200 200 235 220 C 265 238 280 256 290 268 L 18 268 Z" fill="url(#cliff2)"/>
+    <g fill="#f6ebdd" stroke="#cbb3a0" stroke-width="1.2">
+      <rect x="52" y="150" width="30" height="34" rx="2"/><rect x="88" y="160" width="26" height="28" rx="2"/><rect x="120" y="168" width="34" height="30" rx="2"/>
+      <rect x="160" y="178" width="26" height="32" rx="2"/><rect x="192" y="190" width="30" height="30" rx="2"/><rect x="226" y="204" width="24" height="28" rx="2"/>
+      <rect x="70" y="190" width="30" height="30" rx="2" fill="#f3d7c5"/><rect x="108" y="200" width="32" height="30" rx="2" fill="#f9e3cf"/><rect x="148" y="212" width="30" height="30" rx="2" fill="#efd9d0"/>
+      <rect x="184" y="222" width="26" height="30" rx="2" fill="#f6ebdd"/><rect x="214" y="234" width="34" height="28" rx="2" fill="#f3d7c5"/>
+    </g>
+    <g fill="#a98b78" opacity=".8">
+      <rect x="56" y="160" width="5" height="7"/><rect x="66" y="160" width="5" height="7"/><rect x="94" y="170" width="5" height="7"/><rect x="126" y="178" width="5" height="7"/><rect x="138" y="178" width="5" height="7"/>
+      <rect x="166" y="188" width="5" height="7"/><rect x="198" y="200" width="5" height="7"/><rect x="232" y="214" width="5" height="7"/><rect x="76" y="200" width="5" height="7"/><rect x="88" y="200" width="5" height="7"/>
+      <rect x="116" y="210" width="5" height="7"/><rect x="128" y="210" width="5" height="7"/><rect x="156" y="222" width="5" height="7"/><rect x="190" y="232" width="5" height="7"/><rect x="222" y="244" width="5" height="7"/>
+    </g>
+    <path d="M100 150 l 7 -14 l 7 14z" fill="#d9b9a3"/><rect x="104" y="128" width="6" height="10" fill="#f6ebdd"/>
+    <g fill="#8aa37a"><ellipse cx="40" cy="186" rx="14" ry="8"/><ellipse cx="300" cy="258" rx="12" ry="6"/><ellipse cx="256" cy="246" rx="10" ry="5"/></g>
+    <g fill="#ffffff"><path d="M372 300 l 18 0 l -3 6 l -12 0z"/><path d="M381 286 l 0 14 l 8 -4z" fill="#f4f1ff"/><path d="M470 318 l 14 0 l -2 5 l -10 0z"/><path d="M477 307 l 0 11 l 6 -3z" fill="#f4f1ff"/><path d="M520 292 l 12 0 l -2 4 l -8 0z"/></g>
+    <path d="M18 348 L582 348 L582 330 Q 300 322 18 330Z" fill="#dcc9bb" opacity=".9"/>
+  </g>
+  <rect x="18" y="18" width="564" height="330" rx="8" fill="none" stroke="#eadfd3" stroke-width="1"/>
+  <text x="300" y="378" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="3.2" fill="#6e6792">COSTIERA AMALFITANA</text>
+  <g fill="none" stroke="#cdb9c9" stroke-width="1"><circle cx="553" cy="372" r="9"/><circle cx="553" cy="372" r="4"/></g>
+</svg>

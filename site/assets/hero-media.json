@@ -1,0 +1,5 @@
+{
+  "_comment": "Optional real media for the hero. Set to a file under assets/ to enable; null keeps the labelled placeholder. No video or audio clip has been supplied yet.",
+  "video": null,
+  "audio": null
+}
